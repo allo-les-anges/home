@@ -1,0 +1,334 @@
+<!-- Hero Section with Video -->
+<section class="hero-section h-screen flex items-center justify-center pt-16">
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="https://allo-les-anges.github.io/home/gallery/video_homepage_resorts.mp4" type="video/mp4">
+        Votre navigateur ne prend pas en charge la lecture de vidéos.
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-center px-4">
+        <h1 class="text-4xl md:text-6xl font-playfair font-bold text-white mb-4">Projets Internationaux de Luxe</h1>
+        <div class="gold-line w-24 mx-auto my-6"></div>
+        <p class="text-xl md:text-2xl text-white font-light max-w-2xl mx-auto">Découvrez notre collection exclusive de résidences de prestige à travers le monde</p>
+        <a href="#projects" class="mt-8 inline-block px-8 py-3 bg-secondary text-white font-medium uppercase tracking-wider text-sm hover:bg-opacity-90 transition duration-300">Explorer</a>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-20 px-4 bg-white">
+    <div class="container mx-auto">
+        <h2 class="text-3xl md:text-4xl font-playfair font-bold text-center text-primary mb-2">Nos Projets en Espagne</h2>
+        <div class="gold-line w-24 mx-auto my-6"></div>
+        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-16">Des résidences d'exception conçues pour offrir une expérience de vie incomparable, alliant luxe, confort et élégance.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+            <!-- Mascarat Suites Project -->
+            <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300">
+                <div class="project-image h-64 w-full overflow-hidden">
+                    <img src="https://i.postimg.cc/W4fcccWL/32-resultat.jpg" alt="Mascarat Suites" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-playfair font-bold text-primary mb-3">Mascarat Suites</h3>
+                    <div class="gold-line w-16 my-4"></div>
+                    <p class="text-gray-600 mb-6">Un complexe résidentiel de luxe situé sur la côte espagnole, offrant des vues imprenables sur la Méditerranée et des prestations haut de gamme pour une expérience de vie exceptionnelle.</p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="px-3 py-1 bg-cream text-primary text-xs rounded-full">Front de mer</span>
+                        <span class="px-3 py-1 bg-cream text-primary text-xs rounded-full">Piscine privée</span>
+                        <span class="px-3 py-1 bg-cream text-primary text-xs rounded-full">Spa</span>
+                        <span class="px-3 py-1 bg-cream text-primary text-xs rounded-full">Concierge 24/7</span>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="details-btn px-6 py-2 border border-secondary text-secondary hover:bg-secondary hover:text-white transition duration-300" data-project="mascarat">Voir les détails</button>
+                        <a href="https://www.amaru-resorts.com/projects/mascarat/" target="_blank" class="px-6 py-2 bg-primary text-white hover:bg-opacity-90 transition duration-300">Visiter le projet</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Halepo Project -->
+            <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300">
+                <div class="project-image h-64 w-full overflow-hidden">
+                    <img src="https://allo-les-anges.github.io/halepo/assets/images/gallery/halepo_card.jpeg" alt="Halepo" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-playfair font-bold text-primary mb-3">Halepo</h3>
+                    <div class="gold-line w-16 my-4"></div>
+                    <p class="text-gray-600 mb-6">Une résidence exclusive nichée à flanc de colline au cœur de l'Espagne, combinant architecture contemporaine et matériaux nobles pour créer un havre de paix et de luxe.</p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="px-3 py-1 bg-cream text-primary text-xs rounded-full">Vue panoramique</span>
+                        <span class="px-3 py-1 bg-cream text-primary text-xs rounded-full">Jardins privés</span>
+                        <span class="px-3 py-1 bg-cream text-primary text-xs rounded-full">Salle de fitness</span>
+                        <span class="px-3 py-1 bg-cream text-primary text-xs rounded-full">Sécurité 24/7</span>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="details-btn px-6 py-2 border border-secondary text-secondary hover:bg-secondary hover:text-white transition duration-300" data-project="halepo">Voir les détails</button>
+                        <a href="https://www.amaru-resorts.com/projects/halepo/" target="_blank" class="px-6 py-2 bg-primary text-white hover:bg-opacity-90 transition duration-300">Visiter le projet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Details Modal -->
+<div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="p-6 relative">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <div id="modal-content" class="pt-4">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-primary text-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-playfair font-bold text-center mb-2">Contactez-nous</h2>
+        <div class="gold-line w-24 mx-auto my-6"></div>
+        <p class="text-center max-w-2xl mx-auto mb-12 text-cream opacity-90">Intéressé par l'un de nos projets de luxe? Notre équipe est à votre disposition pour répondre à toutes vos questions.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <!-- Contact Card - Gillian Diver -->
+            <div class="contact-card bg-white rounded-lg overflow-hidden shadow-lg p-6 text-primary">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center mr-3">
+                        <span class="text-lg font-bold">🇪🇸</span>
+                    </div>
+                    <h3 class="text-xl font-playfair font-bold">Gillian Diver</h3>
+                </div>
+                <div class="gold-line w-16 my-4"></div>
+                <p class="text-gray-600 mb-4">Espagne</p>
+                <div class="flex items-center mb-3">
+                    <svg class="w-5 h-5 text-secondary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                    <a href="tel:+34627768233" class="text-gray-600 hover:text-secondary">+34 627 768 233</a>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-5 h-5 text-secondary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <a href="mailto:gillian@amaru-homes.com" class="text-gray-600 hover:text-secondary">gillian@amaru-homes.com</a>
+                </div>
+            </div>
+            
+            <!-- Contact Card - Déborah Berings -->
+            <div class="contact-card bg-white rounded-lg overflow-hidden shadow-lg p-6 text-primary">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center mr-3">
+                        <span class="text-lg font-bold">🇪🇸</span>
+                    </div>
+                    <h3 class="text-xl font-playfair font-bold">Déborah Berings</h3>
+                </div>
+                <div class="gold-line w-16 my-4"></div>
+                <p class="text-gray-600 mb-4">Espagne</p>
+                <div class="flex items-center mb-3">
+                    <svg class="w-5 h-5 text-secondary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                    <a href="tel:+34627768253" class="text-gray-600 hover:text-secondary">+34 627 768 253</a>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-5 h-5 text-secondary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <a href="mailto:deborah@amaru-homes.com" class="text-gray-600 hover:text-secondary">deborah@amaru-homes.com</a>
+                </div>
+            </div>
+            
+            <!-- Contact Card - Gaëtan Mukeba-Harchies -->
+            <div class="contact-card bg-white rounded-lg overflow-hidden shadow-lg p-6 text-primary">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center mr-3">
+                        <span class="text-lg font-bold">🇧🇪</span>
+                    </div>
+                    <h3 class="text-xl font-playfair font-bold">Gaëtan Mukeba-Harchies</h3>
+                </div>
+                <div class="gold-line w-16 my-4"></div>
+                <p class="text-gray-600 mb-4">Belgique</p>
+                <div class="flex items-center mb-3">
+                    <svg class="w-5 h-5 text-secondary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                    <a href="tel:+32475332512" class="text-gray-600 hover:text-secondary">+32 475 332 512</a>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-5 h-5 text-secondary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <a href="mailto:gaetan@amaru-homes.com" class="text-gray-600 hover:text-secondary">gaetan@amaru-homes.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary border-t border-secondary border-opacity-20 py-8 text-cream text-opacity-80">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <div class="text-white font-playfair font-bold text-xl">
+                    AMARU-<span class="text-secondary">RESORTS</span>
+                </div>
+            </div>
+            <div class="flex space-x-6 mb-6 md:mb-0">
+                <a href="#" class="text-cream text-opacity-80 hover:text-secondary transition duration-300">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="text-cream text-opacity-80 hover:text-secondary transition duration-300">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="text-cream text-opacity-80 hover:text-secondary transition duration-300">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="border-t border-secondary border-opacity-20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm mb-4 md:mb-0">&copy; 2023 Amaru-Resorts. Tous droits réservés.</p>
+            <div class="flex space-x-6 text-sm">
+                <a href="#" class="text-cream text-opacity-80 hover:text-secondary transition duration-300">Mentions légales</a>
+                <a href="#" class="text-cream text-opacity-80 hover:text-secondary transition duration-300">Politique de confidentialité</a>
+                <a href="#" class="text-cream text-opacity-80 hover:text-secondary transition duration-300">Cookies</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+            // Close mobile menu if open
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    });
+
+    // Project details modal functionality
+    const modal = document.getElementById('project-modal');
+    const modalContent = document.getElementById('modal-content');
+    const closeModal = document.getElementById('close-modal');
+    const detailsBtns = document.querySelectorAll('.details-btn');
+
+    // Project details content
+    const projectDetails = {
+        mascarat: {
+            title: "Mascarat Suites",
+            description: "Situé sur la côte méditerranéenne espagnole, Mascarat Suites est un complexe résidentiel de luxe offrant une expérience de vie incomparable. Chaque suite a été conçue avec une attention méticuleuse aux détails, utilisant les matériaux les plus nobles et les finitions les plus raffinées.",
+            features: [
+                "Suites de 150 à 300 m² avec terrasses panoramiques",
+                "Piscines privées à débordement",
+                "Service de conciergerie 24h/24",
+                "Spa et centre de bien-être",
+                "Restaurant gastronomique",
+                "Accès direct à la plage privée",
+                "Sécurité 24h/24"
+            ],
+            price: "À partir de 1 200 000 €",
+            delivery: "Livraison prévue : 2ème trimestre 2024",
+            link: "https://www.amaru-resorts.com/projects/mascarat/"
+        },
+        halepo: {
+            title: "Halepo",
+            description: "Une résidence exclusive nichée à flanc de colline au cœur de l'Espagne, combinant architecture contemporaine et matériaux nobles pour créer un havre de paix et de luxe.",
+            features: [
+                "Villas de 200 à 450 m² sur des terrains de 1000 à 2500 m²",
+                "Jardins paysagers privés",
+                "Piscines intérieures et extérieures",
+                "Domotique intégrée de dernière génération",
+                "Matériaux écologiques et durables",
+                "Vues panoramiques sur les montagnes",
+                "Héliport privé"
+            ],
+            price: "À partir de 1 800 000 €",
+            delivery: "Livraison prévue : 4ème trimestre 2023",
+            link: "https://www.amaru-resorts.com/projects/halepo/"
+        }
+    };
+
+    // Open modal with project details
+    detailsBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const project = btn.getAttribute('data-project');
+            const details = projectDetails[project];
+            
+            modalContent.innerHTML = `
+                <h2 class="text-3xl font-playfair font-bold text-primary mb-4">${details.title}</h2>
+                <div class="gold-line w-16 my-4"></div>
+                <p class="text-gray-600 mb-6">${details.description}</p>
+                
+                <h3 class="text-xl font-playfair font-medium text-primary mb-3">Caractéristiques</h3>
+                <ul class="list-disc pl-5 mb-6 text-gray-600">
+                    ${details.features.map(feature => `<li class="mb-1">${feature}</li>`).join('')}
+                </ul>
+                
+                <div class="bg-cream p-4 rounded-lg mb-6">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                        <div>
+                            <p class="text-sm text-gray-500">Prix</p>
+                            <p class="text-xl font-medium text-primary">${details.price}</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Livraison</p>
+                            <p class="text-primary">${details.delivery}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row justify-center mt-8 gap-4">
+                    <a href="${details.link}" target="_blank" class="px-8 py-3 bg-secondary text-white font-medium uppercase tracking-wider text-sm hover:bg-opacity-90 transition duration-300 text-center">Visiter le projet</a>
+                    <button class="px-8 py-3 border border-primary text-primary font-medium uppercase tracking-wider text-sm hover:bg-primary hover:text-white transition duration-300">Prendre rendez-vous</button>
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close modal
+    closeModal.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    });
+
+    // Close modal when clicking outside
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    });
+</script>
